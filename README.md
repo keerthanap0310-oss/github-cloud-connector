@@ -29,7 +29,7 @@ A high-performance GitHub API connector built with **FastAPI**. This application
 1. **Clone the repository**:
    ```bash
    git clone <your-repo-url>
-   cd backend-test
+   cd github-cloud-connector
    ```
 
 2. **Create and activate a virtual environment**:
@@ -40,23 +40,25 @@ A high-performance GitHub API connector built with **FastAPI**. This application
 
 3. **Install dependencies**:
    ```bash
-   pip install -r app/requirements.txt
+   pip install -r requirements.txt
    ```
 
 ### 3. Environment Configuration
-Create a `.env` file in the `app/` directory (you can use `.env.template` as a starting point):
+Create a `.env` file in the project root:
 
 ```bash
-cp app/.env.template app/.env
+touch .env
 ```
 
-Open `app/.env` and configure the following variables:
+Open `.env` and configure the following variables:
 
 | Variable | Description | Example |
 | :--- | :--- | :--- |
 | `GITHUB_PAT` | **Required**. Your GitHub Personal Access Token. | `ghp_ABC123...` |
 | `GITHUB_API_BASE_URL` | Optional. Defaults to `https://api.github.com`. | `https://api.github.com` |
 | `REQUEST_TIMEOUT` | Optional. Request timeout in seconds. | `10` |
+
+> **Note**: The `.env` file contains sensitive information and is automatically ignored by Git (via `.gitignore`) to prevent accidental commits.
 
 ---
 
